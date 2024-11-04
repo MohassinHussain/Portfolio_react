@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon, Github, Linkedin, ExternalLinkIcon } from 'lucide-react';
-import { FontAwesomeIcon } from 'fontawesome'
+
 
 const TypeWrite = ({ text }) => {
   return (
