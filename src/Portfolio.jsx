@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon, Github, Linkedin, ExternalLinkIcon } from 'lucide-react';
-
+import { FontAwesomeIcon } from 'fontawesome'
 
 const TypeWrite = ({ text }) => {
   return (
@@ -29,6 +29,7 @@ const TypeWrite = ({ text }) => {
   )
 }
 
+
 export default function Portfolio() {
   const cards = [
     {
@@ -37,9 +38,14 @@ export default function Portfolio() {
         <div>
           <h2 className="text-4xl font-bold mb-2">I am B Md Mohassin Hussain</h2>
           <p className="mb-2 text-3xl">Full-stack Developer</p>
-          <p className="mb-2 text-3xl">mohassinhussain22@gmail.com  9676940969</p>
+          <a href="mailto:mohassinhussain22@gmail.com" className="mb-2 text-3xl underline">
+            mohassinhussain22@gmail.com
+          </a> <br /> <br />
+          <a href="tel:+91 9676940969" className="mb-2 text-3xl underline">
+            +91 9676940969
+          </a> <br />
           <p className="text-lg">Hyderabad, Telangana, India</p>
-          <p className="mt-10 text-lg">
+          <p className="mt-5 text-lg">
             Welcome to my portfolio! I am an enthusiast full stack developer and also pretty professional in problem solving and critical thinking.
           </p>
         </div>
@@ -78,7 +84,7 @@ export default function Portfolio() {
     },
 
     {
-      title: 'Projects 1',
+      title: 'Project 1',
       content: (
         <div>
           <h3 className="font-bold text-3xl mb-2">Archivenvo</h3>
@@ -93,7 +99,7 @@ export default function Portfolio() {
       )
     },
     {
-      title: 'Projects 2',
+      title: 'Project 2',
       content: (
         <div>
           <h3 className="font-bold text-3xl mb-2">Fake Logo detection</h3>
@@ -108,7 +114,7 @@ export default function Portfolio() {
       )
     },
     {
-      title: 'Projects 3',
+      title: 'Project 3',
       content: (
         <div>
           <h3 className="font-bold text-3xl mb-2">bFinder</h3>
@@ -123,7 +129,7 @@ export default function Portfolio() {
       )
     },
     {
-      title: 'Projects 4',
+      title: 'Project 4',
       content: (
         <div>
           <h3 className="font-bold text-3xl mb-2">inApp-share (idea prototype)</h3>
@@ -138,7 +144,7 @@ export default function Portfolio() {
       )
     },
     {
-      title: 'Projects 5',
+      title: 'Project 5',
       content: (
         <div>
           <h3 className="font-bold text-3xl mb-2">Globe Hoppin</h3>
@@ -206,8 +212,11 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-800 via-purple-500 to-black-200 flex flex-col items-center justify-center overflow-hidden p-4">
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
+      <div className="flex items-center mb-10 gap-2">
+        <img className="-mt-8 w-12 h-12" src="src/assets/waving-hand-default.svg" alt="Waving hand" />
+        <TypeWrite text="I am B Md Mohassin Hussain" />
+      </div>
 
-      <TypeWrite text="B Md Mohassin Hussain" />
       <div className="relative w-full max-w-2xl h-[36rem]">
         <AnimatePresence initial={false}>
           <motion.div
