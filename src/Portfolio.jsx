@@ -63,12 +63,7 @@ export default function Portfolio() {
         </div>
       )
     },
-    // Frontend: HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React.js, Redux toolkit, React Native
-    // Backend and Databases: Node.js, Express.js, MongoDB, Firebase
-    // DevOps & Related: GitHub, Vercel, AWS, Google Analytics
-    // Programming Languages: C, C++, Python, Java
-    // Intermediate: Data Structures & Algorithms, ML Algorithms, Pandas, Figma, UI, Docker, PostgreSQL, MySQL
-    // Tools: VS Code, Git
+
     {
       title: 'Skills',
       content: (
@@ -213,7 +208,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-blue-800 via-purple-500 to-black-200 flex flex-col items-center justify-center overflow-hidden p-4">
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
       <div className="flex items-center mb-10 gap-2">
-        <img className="-mt-8 w-12 h-12" src="src/assets/waving-hand-default.svg" alt="Waving hand" />
+        <img className="-mt-8 w-12 h-12" src="./src/assets/waving-hand-default.svg" alt="Waving hand" />
         <TypeWrite text="I am B Md Mohassin Hussain" />
       </div>
 
