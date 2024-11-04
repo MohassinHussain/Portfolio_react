@@ -36,8 +36,8 @@ export default function Portfolio() {
       content: (
         <div>
           <h2 className="text-4xl font-bold mb-2">I am B Md Mohassin Hussain</h2>
-          <p className="mb-2 text-3xl">Full-stack Developer</p>
-          <a href="mailto:mohassinhussain22@gmail.com" className="mb-2 text-3xl text-yellow-700 underline">
+          <p className="mb-2 text-3xl"></p>
+          <a href="mailto:mohassinhussain22@gmail.com" className="mb-2 mt-4 text-3xl text-yellow-700 underline">
             mohassinhussain22@gmail.com
           </a> <br /> <br />
           <a href="tel:+91 9676940969" className="mb-2 text-3xl text-green-600 underline">
