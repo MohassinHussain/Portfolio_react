@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon, Github, Linkedin, ExternalLinkIcon } from 'lucide-react';
-
-
+import wavingHand from "./assets/waving-hand-default.svg"
 const TypeWrite = ({ text }) => {
   return (
     <motion.h1
@@ -63,7 +62,7 @@ export default function Portfolio() {
         </div>
       )
     },
-
+    
     {
       title: 'Skills',
       content: (
@@ -208,7 +207,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-blue-800 via-purple-500 to-black-200 flex flex-col items-center justify-center overflow-hidden p-4">
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
       <div className="flex items-center mb-10 gap-2">
-        <img className="-mt-8 w-12 h-12" src="./src/assets/waving-hand-default.svg" alt="Waving hand" />
+        <img className="-mt-8 w-12 h-12" src={wavingHand}  />
         <TypeWrite text="I am B Md Mohassin Hussain" />
       </div>
 
