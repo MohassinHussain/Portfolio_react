@@ -203,7 +203,6 @@ export default function Portfolio() {
   }, []);
 
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-800 via-purple-500 to-black-200 flex flex-col items-center justify-center overflow-hidden p-4">
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
