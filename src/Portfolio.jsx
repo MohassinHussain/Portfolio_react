@@ -33,7 +33,7 @@ import "./index.css";
 const TypeWrite = ({ text }) => {
   return (
     <motion.h1
-      className="text-4xl  bai-light text-white mb-8"
+      className="text-4xl  bai-light text-gray-300 mb-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
@@ -59,12 +59,21 @@ const TypeWrite = ({ text }) => {
 };
 
 export default function Portfolio() {
+
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDark=()=>{
+    if(darkMode) setDarkMode(false);
+    else setDarkMode(true);
+
+  }
+
+
   const cards = [
     {
       title: "Introduction",
       content: (
         <div>
-          <h2 className="text-4xl bai-bold mb-2">I am B Md Mohassin Hussain</h2>
+          <h2 className={`text-4xl bai-bold mb-2 ${darkMode ? 'text-gray-300':'text-black'}`}>I am B Md Mohassin Hussain</h2>
           <p className="mb-2  text-3xl"></p>
           <a
             href="mailto:mohassinhussain22@gmail.com"
@@ -80,8 +89,8 @@ export default function Portfolio() {
             +91 9676940969
           </a>{" "}
           <br />
-          <p className="text-2xl bai-light ">Hyderabad, Telangana, India</p>
-          <p className="mt-5  text-[1.4rem] bai-light">
+          <p className={`text-2xl bai-light ${darkMode ? 'text-gray-300':'text-black'} `}>Hyderabad, Telangana, India</p>
+          <p className={`mt-5  text-[1.4rem] bai-light ${darkMode ? 'text-gray-300':'text-black'}`}>
             Welcome to my portfolio! I am an enthusiast full stack developer and
             also pretty professional in problem solving and critical thinking.
           </p>
@@ -333,43 +342,57 @@ export default function Portfolio() {
       window.removeEventListener("scroll", handleScroll); // Cleanup
     };
   }, []);
-
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-800 via-purple-500 to-black-200 flex flex-col items-center justify-center overflow-hidden p-4">
+    <div className={`min-h-screen bg-gradient-to-br ${darkMode ? 'from-black via-blue-900 to-gray-300' : 'from-blue-800 via-purple-500 to-black-200' } flex flex-col items-center justify-center overflow-hidden p-4`}>
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
+      
       <div className="flex items-center mb-10 gap-2">
         <img className="-mt-8 w-12 h-12" src={wavingHand} />
         <TypeWrite text="I am B Md Mohassin Hussain" />
       </div>
+      <div className="-mt-10">
+        <img src="./src/assets/batmanImg.png"
+          className={`bg-transparent bg-clip-content ${darkMode ? 'opacity-100' : 'opacity-50' }  rounded-full w-10 mb-2`}
+        alt="Let's go dark!" 
+          onClick={toggleDark}
+        />
+      </div>
+      {darkMode && <div className="flex">
+          <h1 className="text-gray-300 bai-bold text-[1.5rem]">The dark side is now open
 
+          </h1>
+          <img src="./src/assets/swag.png" className="rounded-full w-12 ml-2" alt="" />
+
+        </div>}
       <div className="relative w-full max-w-2xl h-[36rem]">
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
-            className="absolute inset-0 bg-gray-300 rounded-lg shadow-lg p-6 flex flex-col justify-between"
+            className={`absolute inset-0 ${darkMode ? 'bg-gray-700' : 'bg-gray-300' }  rounded-lg shadow-lg p-6 flex flex-col justify-between`}
             initial={{ x: 300, y: 300, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
             exit={{ x: -300, y: -300, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div>
-              <h2 className="text-4xl bai-semibold mb-10 underline">
+              <h2 className={`text-4xl bai-semibold mb-10 underline ${darkMode ? 'text-gray-300' : ' text-gray-900' }`}>
                 {cards[currentIndex].title}
               </h2>
-              <div className="text-black overflow-y-auto max-h-[28rem] text-lg">
+              <div className={`${darkMode ? 'text-gray-300' : ' text-gray-900' } overflow-y-auto max-h-[28rem] text-lg`}>
                 {cards[currentIndex].content}
               </div>
             </div>
             <div className="flex justify-between items-center mt-4">
               <button
                 onClick={prevCard}
-                className="p-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors text-white"
+                className={`p-2 rounded-full ${darkMode ? 'bg-gray-300' : 'bg-gray-600' } hover:bg-gray-500 transition-colors text-white`}
                 aria-label="Previous card"
               >
-                <ChevronLeftIcon size={24} />
+                <ChevronLeftIcon className={`${darkMode ? 'text-black' : 'text-white' }`} size={24} />
               </button>
               <div className="flex gap-4">
-                <span className="text-black font-semibold">
+                <span className={`${darkMode ? 'text-gray-400' : 'text-black' } font-semibold`}>
                   -----{" "}
                   {
                     cards[(currentIndex - 1 + cards.length) % cards.length]
@@ -377,16 +400,16 @@ export default function Portfolio() {
                   }
                 </span>
                 |
-                <span className="text-black font-semibold">
+                <span className={`${darkMode ? 'text-gray-400' : 'text-black' } font-semibold`}>
                   {cards[(currentIndex + 1) % cards.length].title} -----
                 </span>
               </div>
               <button
                 onClick={nextCard}
-                className="p-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors text-white"
+                className={`p-2 rounded-full ${darkMode ? 'bg-gray-300' : 'bg-gray-600' } hover:bg-gray-500 transition-colors text-white`}
                 aria-label="Next card"
               >
-                <ChevronRightIcon size={24} />
+                <ChevronRightIcon className={`${darkMode ? 'text-black' : 'text-white' }`} size={24} />
               </button>
             </div>
           </motion.div>
