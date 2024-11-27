@@ -352,7 +352,7 @@ export default function Portfolio() {
         <TypeWrite text="I am B Md Mohassin Hussain" />
       </div>
       <div className="-mt-10">
-        <img src="./src/assets/batmanImg.png"
+        <img src="/src/assets/batmanImg.png"
           className={`bg-transparent bg-clip-content ${darkMode ? 'opacity-100' : 'opacity-50' }  rounded-full w-10 mb-2`}
         alt="Let's go dark!" 
           onClick={toggleDark}
@@ -362,7 +362,7 @@ export default function Portfolio() {
           <h1 className="text-gray-300 bai-bold text-[1.5rem]">The dark side is now open
 
           </h1>
-          <img src="./src/assets/swag.png" className="rounded-full w-12 ml-2" alt="" />
+          <img src="/src/assets/swag.png" className="rounded-full w-12 ml-2" alt="" />
 
         </div>}
       <div className="relative w-full max-w-2xl h-[36rem]">
