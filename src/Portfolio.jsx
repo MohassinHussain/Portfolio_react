@@ -29,6 +29,7 @@ import { SiPostman } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 
 import "./index.css";
+import Resume from "./Resume";
 
 const TypeWrite = ({ text }) => {
   return (
@@ -59,21 +60,24 @@ const TypeWrite = ({ text }) => {
 };
 
 export default function Portfolio() {
-
   const [darkMode, setDarkMode] = useState(false);
-  const toggleDark=()=>{
-    if(darkMode) setDarkMode(false);
+  const toggleDark = () => {
+    if (darkMode) setDarkMode(false);
     else setDarkMode(true);
-
-  }
-
+  };
 
   const cards = [
     {
       title: "Introduction",
       content: (
         <div>
-          <h2 className={`text-4xl bai-bold mb-2 ${darkMode ? 'text-gray-300':'text-black'}`}>I am B Md Mohassin Hussain</h2>
+          <h2
+            className={`text-4xl bai-bold mb-2 ${
+              darkMode ? "text-gray-300" : "text-black"
+            }`}
+          >
+            I am B Md Mohassin Hussain
+          </h2>
           <p className="mb-2  text-3xl"></p>
           <a
             href="mailto:mohassinhussain22@gmail.com"
@@ -89,8 +93,18 @@ export default function Portfolio() {
             +91 9676940969
           </a>{" "}
           <br />
-          <p className={`text-2xl bai-light ${darkMode ? 'text-gray-300':'text-black'} `}>Hyderabad, Telangana, India</p>
-          <p className={`mt-5  text-[1.4rem] bai-light ${darkMode ? 'text-gray-300':'text-black'}`}>
+          <p
+            className={`text-2xl bai-light ${
+              darkMode ? "text-gray-300" : "text-black"
+            } `}
+          >
+            Hyderabad, Telangana, India
+          </p>
+          <p
+            className={`mt-5  text-[1.4rem] bai-light ${
+              darkMode ? "text-gray-300" : "text-black"
+            }`}
+          >
             Welcome to my portfolio! I am an enthusiast full stack developer and
             also pretty professional in problem solving and critical thinking.
           </p>
@@ -119,8 +133,8 @@ export default function Portfolio() {
       content: (
         <div className="flex flex-col items-center justify-center h-80 gap-10">
           <div className="flex justify-around w-full">
-          <FaGolang className="text-[3rem] text-[#00ADD8]" />
-            <FaJava className="text-[3rem] text-orange-500"  />
+            <FaGolang className="text-[3rem] text-[#00ADD8]" />
+            <FaJava className="text-[3rem] text-orange-500" />
             <TbBrandCpp className="text-[3rem] text-gray-500" />
             <IoLogoPython className="text-[3rem]" />
           </div>
@@ -134,7 +148,7 @@ export default function Portfolio() {
             <TbBrandReactNative className="text-[3rem] text-blue-500" />
             <TbBrandRedux className="text-[3rem] text-purple-700" />
           </div>
-          
+
           <div className="flex justify-around w-full">
             <FaGitAlt className="text-[3rem] text-orange-600" />
             <FaGithub className="text-[3rem] " />
@@ -155,7 +169,9 @@ export default function Portfolio() {
       content: (
         <div>
           <h3 className="font-bold text-3xl bai-bold mb-2">Archivenvo</h3>
-          <p className="mb-4 text-lg bai-semibold">React.js, MongoDB, Node.js, Express.js</p>
+          <p className="mb-4 text-lg bai-semibold">
+            React.js, MongoDB, Node.js, Express.js
+          </p>
           <p className="text-lg bai-light">
             Developed a file sharing platform using React.js for robust state
             management on the frontend. The backend is built with Node.js and
@@ -176,7 +192,9 @@ export default function Portfolio() {
       title: "Project 2",
       content: (
         <div>
-          <h3 className="font-bold text-3xl mb-2 bai-bold">Fake Logo detection</h3>
+          <h3 className="font-bold text-3xl mb-2 bai-bold">
+            Fake Logo detection
+          </h3>
           <p className="mb-4 text-lg bai-semibold">Python, CNN (Algorithm)</p>
           <p className="text-lg bai-light">
             This project uses a CNN-based algorithm to detect fake logos by
@@ -200,7 +218,9 @@ export default function Portfolio() {
       content: (
         <div>
           <h3 className="text-3xl bai-bold mb-2">bFinder</h3>
-          <p className="mb-4 text-lg bai-semibold">React Native, Firebase, Clerk Auth</p>
+          <p className="mb-4 text-lg bai-semibold">
+            React Native, Firebase, Clerk Auth
+          </p>
           <p className="text-lg bai-light">
             A mobile app built using React Native (expo) for frontend and
             integrated with Firebase for real-time data storage and retrieval.
@@ -263,32 +283,36 @@ export default function Portfolio() {
     {
       title: "Links",
       content: (
-        <div className="flex justify-center h-[20rem] items-center flex-col space-y-4 mt-4">
-          <a
-            href="https://linkedin.com/in/mohassinhussain"
-            className="text-blue-700 hover:text-blue-800 bai-semibold flex items-center"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={32} className="mr-2" /> LinkedIn
-          </a>
-          <a
-            href="https://github.com/MohassinHussain"
-            className="text-gray-800 bai-semibold hover:text-gray-900 flex items-center"
-            aria-label="GitHub"
-          >
-            <Github size={32} className="mr-2" /> GitHub
-          </a>
-          {/* <a href="#" className="text-blue-500 hover:text-blue-600 flex items-center" aria-label="Portfolio">
+        <>
+          <div className="flex justify-center h-[20rem] items-center flex-col space-y-4 mt-4">
+            <a
+              href="https://linkedin.com/in/mohassinhussain"
+              className="text-blue-700 hover:text-blue-800 bai-semibold flex items-center"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={32} className="mr-2" /> LinkedIn
+            </a>
+            <a
+              href="https://github.com/MohassinHussain"
+              className="text-gray-800 bai-semibold hover:text-gray-900 flex items-center"
+              aria-label="GitHub"
+            >
+              <Github size={32} className="mr-2" /> GitHub
+            </a>
+            {/* <a href="#" className="text-blue-500 hover:text-blue-600 flex items-center" aria-label="Portfolio">
             <ExternalLinkIcon size={32} className="mr-2" /> Portfolio
           </a> */}
-          <a
-            href="https://leetcode.com/u/22h51a7306/"
-            className="text-orange-500 bai-semibold hover:text-orange-600 flex items-center"
-            aria-label="LeetCode"
-          >
-            <ExternalLinkIcon size={32} className="mr-2" /> LeetCode
-          </a>
-        </div>
+            <a
+              href="https://leetcode.com/u/22h51a7306/"
+              className="text-orange-500 bai-semibold hover:text-orange-600 flex items-center"
+              aria-label="LeetCode"
+            >
+              <ExternalLinkIcon size={32} className="mr-2" /> LeetCode
+            </a>
+            <Resume />
+          </div>
+          
+        </>
       ),
     },
   ];
@@ -328,7 +352,6 @@ export default function Portfolio() {
     };
   }, []);
 
-
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const cardHeight = window.innerHeight; // Assuming each card takes up 100vh
@@ -342,57 +365,90 @@ export default function Portfolio() {
       window.removeEventListener("scroll", handleScroll); // Cleanup
     };
   }, []);
-  
+
   return (
-    <div className={`min-h-screen bg-gradient-to-br ${darkMode ? 'from-black via-blue-900 to-gray-300' : 'from-blue-800 via-purple-500 to-black-200' } flex flex-col items-center justify-center overflow-hidden p-4`}>
+    <div
+      className={`min-h-screen bg-gradient-to-br ${
+        darkMode
+          ? "from-black via-blue-900 to-gray-300"
+          : "from-blue-800 via-purple-500 to-black-200"
+      } flex flex-col items-center justify-center overflow-hidden p-4`}
+    >
       {/* <h1 className="text-4xl font-bold text-white mb-8">B Md Mohassin Hussain</h1>  */}
-      
+
       <div className="flex items-center mb-10 gap-2">
         <img className="-mt-8 w-12 h-12" src={wavingHand} />
         <TypeWrite text="I am B Md Mohassin Hussain" />
       </div>
       <div className="-mt-10">
-        <img src="./src/assets/batmanImg.png"
-          className={`bg-transparent bg-clip-content ${darkMode ? 'opacity-100' : 'opacity-50' }  rounded-full w-10 mb-2`}
-        alt="Let's go dark!" 
+        <img
+          src="./src/assets/batmanImg.png"
+          className={`bg-transparent bg-clip-content ${
+            darkMode ? "opacity-100" : "opacity-50"
+          }  rounded-full w-10 mb-2`}
+          alt="Let's go dark!"
           onClick={toggleDark}
         />
       </div>
-      {darkMode && <div className="flex">
-          <h1 className="text-gray-300 bai-bold text-[1.5rem]">The dark side is now open
-
+      {darkMode && (
+        <div className="flex">
+          <h1 className="text-gray-300 bai-bold text-[1.5rem]">
+            The dark side is now open
           </h1>
-          <img src="./src/assets/swag.png" className="rounded-full w-12 ml-2" alt="" />
-
-        </div>}
+          <img
+            src="./src/assets/swag.png"
+            className="rounded-full w-12 ml-2"
+            alt=""
+          />
+        </div>
+      )}
       <div className="relative w-full max-w-2xl h-[36rem]">
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
-            className={`absolute inset-0 ${darkMode ? 'bg-gray-700' : 'bg-gray-300' }  rounded-lg shadow-lg p-6 flex flex-col justify-between`}
+            className={`absolute inset-0 ${
+              darkMode ? "bg-gray-700" : "bg-gray-300"
+            }  rounded-lg shadow-lg p-6 flex flex-col justify-between`}
             initial={{ x: 300, y: 300, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
             exit={{ x: -300, y: -300, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div>
-              <h2 className={`text-4xl bai-semibold mb-10 underline ${darkMode ? 'text-gray-300' : ' text-gray-900' }`}>
+              <h2
+                className={`text-4xl bai-semibold mb-10 underline ${
+                  darkMode ? "text-gray-300" : " text-gray-900"
+                }`}
+              >
                 {cards[currentIndex].title}
               </h2>
-              <div className={`${darkMode ? 'text-gray-300' : ' text-gray-900' } overflow-y-auto max-h-[28rem] text-lg`}>
+              <div
+                className={`${
+                  darkMode ? "text-gray-300" : " text-gray-900"
+                } overflow-y-auto max-h-[28rem] text-lg`}
+              >
                 {cards[currentIndex].content}
               </div>
             </div>
             <div className="flex justify-between items-center mt-4">
               <button
                 onClick={prevCard}
-                className={`p-2 rounded-full ${darkMode ? 'bg-gray-300' : 'bg-gray-600' } hover:bg-gray-500 transition-colors text-white`}
+                className={`p-2 rounded-full ${
+                  darkMode ? "bg-gray-300" : "bg-gray-600"
+                } hover:bg-gray-500 transition-colors text-white`}
                 aria-label="Previous card"
               >
-                <ChevronLeftIcon className={`${darkMode ? 'text-black' : 'text-white' }`} size={24} />
+                <ChevronLeftIcon
+                  className={`${darkMode ? "text-black" : "text-white"}`}
+                  size={24}
+                />
               </button>
               <div className="flex gap-4">
-                <span className={`${darkMode ? 'text-gray-400' : 'text-black' } font-semibold`}>
+                <span
+                  className={`${
+                    darkMode ? "text-gray-400" : "text-black"
+                  } font-semibold`}
+                >
                   -----{" "}
                   {
                     cards[(currentIndex - 1 + cards.length) % cards.length]
@@ -400,16 +456,25 @@ export default function Portfolio() {
                   }
                 </span>
                 |
-                <span className={`${darkMode ? 'text-gray-400' : 'text-black' } font-semibold`}>
+                <span
+                  className={`${
+                    darkMode ? "text-gray-400" : "text-black"
+                  } font-semibold`}
+                >
                   {cards[(currentIndex + 1) % cards.length].title} -----
                 </span>
               </div>
               <button
                 onClick={nextCard}
-                className={`p-2 rounded-full ${darkMode ? 'bg-gray-300' : 'bg-gray-600' } hover:bg-gray-500 transition-colors text-white`}
+                className={`p-2 rounded-full ${
+                  darkMode ? "bg-gray-300" : "bg-gray-600"
+                } hover:bg-gray-500 transition-colors text-white`}
                 aria-label="Next card"
               >
-                <ChevronRightIcon className={`${darkMode ? 'text-black' : 'text-white' }`} size={24} />
+                <ChevronRightIcon
+                  className={`${darkMode ? "text-black" : "text-white"}`}
+                  size={24}
+                />
               </button>
             </div>
           </motion.div>
