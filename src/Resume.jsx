@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
 function Resume() {
+
     const [grantAccess, setGrantAccess] = useState(false);
-    const [resumeFileUrl, setResumeFileUrl] = useState('https://drive.google.com/file/d/117KAqNlhDLCHq61laI7Ws10PyXZaY4sE/view?usp=sharing');
+    const [resumeFileUrl, setResumeFileUrl] = useState(import.meta.env.VITE_MY_RESUME);
 
     const updateClicked = () => {
         const code = prompt("Enter code: ");
-        if (parseInt(code) === 4327) setGrantAccess(true);
+        if (parseInt(code, 10) === parseInt(import.meta.env.VITE_MY_CODE, 10)) {
+            setGrantAccess(true);
+          }
+          
         else alert("Not you buddy!");
     };
 
@@ -38,7 +42,7 @@ function Resume() {
                 </a>
                 <span>|</span>
                 <a className='underline cursor-grab' onClick={updateClicked}>Update</a> <span>|</span>
-                <a download={true} href='https://docs.google.com/document/d/1vyIIiyijrgVMWe-MAUHBnI3nYl6nkf6d/export?format=docx' className='underline cursor-grab'>Format</a> 
+                <a download={true} href={import.meta.env.VITE_MY_RESUME} className='underline cursor-grab'>Format</a> 
             </div>
             {grantAccess && (
                 <div className='flex flex-col'>
