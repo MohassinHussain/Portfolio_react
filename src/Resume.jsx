@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Resume() {
 
     const [grantAccess, setGrantAccess] = useState(false);
-    const [resumeFileUrl, setResumeFileUrl] = useState('');
+    const [resumeFileUrl, setResumeFileUrl] = useState(import.meta.env.VITE_MY_RESUME);
 
     const updateClicked = () => {
         const code = prompt("Enter code: ");
@@ -20,6 +20,8 @@ function Resume() {
             const file = fileInput.files[0];
             const fileUrl = URL.createObjectURL(file)
             setResumeFileUrl(fileUrl);
+            localStorage.setItem("res", fileUrl)
+            setResumeFileUrl(localStorage.getItem("res"))
             alert("Done!,", fileUrl);
             setGrantAccess(false)
         } else {
@@ -27,6 +29,8 @@ function Resume() {
         }
     };
 
+    // const [updatedRes, setUpdatedRes] = useState('')
+    
 
     return (
         <div className='bai-semibold mt-10 text-center flex items-center flex-col'>
