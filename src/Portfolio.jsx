@@ -383,10 +383,11 @@ export default function Portfolio() {
       <div className="-mt-10">
         <img
           src="./src/assets/batmanImg.png"
-          className={`bg-transparent bg-clip-content ${
+          className={`bg-transparent bg-clip-content text-white ${
             darkMode ? "opacity-100" : "opacity-50"
           }  rounded-full w-10 mb-2`}
-          alt="Let's go dark!"
+          alt={`${toggleDark ? "Dark!" : "Light!"}`}
+
           onClick={toggleDark}
         />
       </div>
