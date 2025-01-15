@@ -354,15 +354,15 @@ export default function Portfolio() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const cardHeight = window.innerHeight; // Assuming each card takes up 100vh
+    const cardHeight = window.innerHeight; 
     const index = Math.floor(scrollPosition / cardHeight);
-    setCurrentIndex(Math.min(index, cards.length - 1)); // Ensure index doesn't exceed card count
+    setCurrentIndex(Math.min(index, cards.length - 1)); 
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

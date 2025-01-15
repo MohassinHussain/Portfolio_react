@@ -42,7 +42,7 @@ function Resume() {
                 </a>
                 <span>|</span>
                 <a className='underline cursor-grab' onClick={updateClicked}>Update</a> <span>|</span>
-                <a download={true} href={import.meta.env.VITE_MY_RESUME} className='underline cursor-grab'>Format</a> 
+                <a download={true} href={import.meta.env.VITE_MY_FORMAT} className='underline cursor-grab'>Format</a> 
             </div>
             {grantAccess && (
                 <div className='flex flex-col'>
