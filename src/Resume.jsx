@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Resume() {
 
     const [grantAccess, setGrantAccess] = useState(false);
-    const [resumeFileUrl, setResumeFileUrl] = useState(import.meta.env.VITE_MY_RESUME);
+    const [resumeFileUrl, setResumeFileUrl] = useState('');
 
     const updateClicked = () => {
         const code = prompt("Enter code: ");
