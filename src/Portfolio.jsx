@@ -31,6 +31,9 @@ import { SiDocker } from "react-icons/si";
 import "./index.css";
 import Resume from "./Resume";
 
+
+import Blogs from "./Blogs";
+
 const TypeWrite = ({ text }) => {
   return (
     <motion.h1
@@ -66,6 +69,7 @@ export default function Portfolio() {
     else setDarkMode(true);
   };
 
+  
   const cards = [
     {
       title: "Introduction",
@@ -311,7 +315,14 @@ export default function Portfolio() {
             </a>
             <Resume />
           </div>
-          
+        </>
+      ),
+    },
+    {
+      title: "Develop",
+      content: (
+        <>
+          <Blogs darkMode={darkMode} />
         </>
       ),
     },
@@ -343,10 +354,8 @@ export default function Portfolio() {
   };
 
   useEffect(() => {
-    // Add event listener for keydown events
     window.addEventListener("keydown", handleKeyDown);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -354,9 +363,9 @@ export default function Portfolio() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const cardHeight = window.innerHeight; 
+    const cardHeight = window.innerHeight;
     const index = Math.floor(scrollPosition / cardHeight);
-    setCurrentIndex(Math.min(index, cards.length - 1)); 
+    setCurrentIndex(Math.min(index, cards.length - 1));
   };
 
   useEffect(() => {
@@ -387,7 +396,6 @@ export default function Portfolio() {
             darkMode ? "opacity-100" : "opacity-50"
           }  rounded-full w-10 mb-2`}
           alt={`${toggleDark ? "Dark!" : "Light!"}`}
-
           onClick={toggleDark}
         />
       </div>

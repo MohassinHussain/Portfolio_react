@@ -1,3 +1,4 @@
+import Blogs from "./Blogs"
 import  Portfolio from "./Portfolio"
 
 import React from 'react'
@@ -7,7 +8,6 @@ function App() {
     <>
     {/* <h1 className="text-2xl">HELLO</h1> */}
       <Portfolio />
-
     </>
   )
 }
