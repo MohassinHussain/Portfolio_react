@@ -172,7 +172,7 @@ export default function Portfolio() {
       title: "Project 1",
       content: (
         <div>
-          <h3 className="font-bold text-3xl bai-bold mb-2">Archivenvo</h3>
+          <h3 className="font-bold text-3xl bai-bold mb-2">FYLz</h3>
           <p className="mb-4 text-lg bai-semibold">
             React.js, MongoDB, Node.js, Express.js
           </p>
@@ -184,7 +184,7 @@ export default function Portfolio() {
             ensuring efficient file sharing and retrieval.
           </p>
           <a
-            href="https://archivenvo.vercel.app/"
+            href="https://fylz.vercel.app/"
             className="text-blue-500 bai-semibold hover:text-blue-600 mt-2 inline-flex items-center"
           >
             View Project <ExternalLinkIcon size={16} className="ml-1" />
