@@ -232,7 +232,7 @@ export default function Portfolio() {
             flexibility. Used Clerk for authentication and their analytics.
           </p>
           <a
-            href="https://github.com/MohassinHussain/bFinder"
+            href="https://drive.google.com/file/d/1JIrL9oQFk02JW2hkQQ8t3c1O50aOuSzH/view?usp=sharing"
             className="text-blue-500 hover:text-blue-600 bai-semibold mt-2 inline-flex items-center"
           >
             View Project <ExternalLinkIcon size={16} className="ml-1" />
