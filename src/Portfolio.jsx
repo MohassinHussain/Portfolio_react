@@ -258,7 +258,7 @@ export default function Portfolio() {
             optimization.
           </p>
           <a
-            href="https://github.com/MohassinHussain/inApp-share"
+            href="https://drive.google.com/file/d/1JNOaXq6rEnhggqHGHZ8rXgMewm3inXKP/view?usp=sharing"
             className="text-blue-500 hover:text-blue-600 mt-2 bai-semibold inline-flex items-center"
           >
             View Project <ExternalLinkIcon size={16} className="ml-1" />
